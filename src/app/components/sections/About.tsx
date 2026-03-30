@@ -54,10 +54,10 @@ export function About() {
           </div>
 
           <div className="relative pl-0 sm:pl-14 lg:pl-16 space-y-6 sm:space-y-8 mt-8 lg:mt-0">
-            <div className="absolute left-0 sm:left-6 lg:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 via-cyan-400 to-indigo-500/20"></div>
+            <div className="absolute left-3 sm:left-6 lg:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 via-cyan-400 to-indigo-500/20"></div>
             
             <div className="relative card-hover pl-6 sm:pl-0">
-              <div className="absolute left-0 sm:left-0 -ml-6 sm:-ml-7 lg:-ml-8 w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 rounded-full bg-indigo-500 flex items-center justify-center border-4 border-slate-900">
+              <div className="absolute left-4 sm:left-0 -ml-6 sm:-ml-7 lg:-ml-8 w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 rounded-full bg-indigo-500 flex items-center justify-center border-4 border-slate-900">
                 <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 lg:w-4 lg:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
@@ -71,7 +71,7 @@ export function About() {
             </div>
 
             <div className="relative card-hover pl-6 sm:pl-0">
-              <div className="absolute left-0 sm:left-0 -ml-6 sm:-ml-7 lg:-ml-8 w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 rounded-full bg-cyan-400 flex items-center justify-center border-4 border-slate-900">
+              <div className="absolute left-4 sm:left-0 -ml-6 sm:-ml-7 lg:-ml-8 w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 rounded-full bg-cyan-400 flex items-center justify-center border-4 border-slate-900">
                 <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 lg:w-4 lg:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
@@ -84,7 +84,7 @@ export function About() {
             </div>
 
             <div className="relative card-hover pl-6 sm:pl-0">
-              <div className="absolute left-0 sm:left-0 -ml-6 sm:-ml-7 lg:-ml-8 w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 rounded-full bg-indigo-400 flex items-center justify-center border-4 border-slate-900">
+              <div className="absolute left-4 sm:left-0 -ml-6 sm:-ml-7 lg:-ml-8 w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 rounded-full bg-indigo-400 flex items-center justify-center border-4 border-slate-900">
                 <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 lg:w-4 lg:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
@@ -98,6 +98,11 @@ export function About() {
           </div>
         </div>
       </div>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 scroll-indicator sm:block">
+          <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center">
+            <div className="w-1.5 h-3 bg-indigo-500 rounded-full mt-2 animate-bounce"></div>
+          </div>
+        </div>
     </section>
   );
 };
