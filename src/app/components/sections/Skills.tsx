@@ -107,6 +107,12 @@ export function Skills (){
           </div>
         </div> */}
       </div>
+
+              <div className="absolute bottom-0  left-1/2 -translate-x-1/2 scroll-indicator sm:block">
+          <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center">
+            <div className="w-1.5 h-3 bg-indigo-500 rounded-full mt-2 animate-bounce"></div>
+          </div>
+        </div>
     </section>
   );
 };
