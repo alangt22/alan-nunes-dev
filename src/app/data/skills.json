@@ -1,60 +1,92 @@
 [
-    {
-      "title": "HTML",
-      "imageSrc": "/skills/HTML5.svg"
-    },
-    {
-      "title": "CSS",
-      "imageSrc": "/skills/CSS3.svg"
-    },
-        {
-      "title": "JavaScript",
-      "imageSrc": "/skills/JavaScript.svg"
-    },
-    {
-      "title": "Next",
-      "imageSrc": "/skills/Next.js.svg"
-    },
-    {
-      "title": "React",
-      "imageSrc": "/skills/React.svg"
-    },
-    {
-      "title": "Node",
-      "imageSrc": "/skills/node.png"
-    },
-
-    {
-      "title": "Tailwind",
-      "imageSrc": "/skills/Tailwind CSS.svg"
-    },
-    {
-      "title": "TypeScript",
-      "imageSrc": "/skills/TypeScript.svg"
-    },
-    {
-      "title": "Sass",
-      "imageSrc": "/skills/pngwing.com.png"
-    },
-    {
-      "title": "mongoDB",
-      "imageSrc": "/skills/mongodb.svg"
-    },
-    {
-      "title": "Firebase",
-      "imageSrc": "/skills/Firebase.svg"
-    },
-    {
-      "title": "PostgreSQL",
-      "imageSrc": "/skills/PostgresSQL.svg"
-    },
-    {
-      "title": "Git",
-      "imageSrc": "/skills/git.png"
-    },
-    {
-      "title": "GitHub",
-      "imageSrc": "/skills/github.png"
-    }
-  ]
-  
+  {
+    "title": "HTML",
+    "imageSrc": "/skills/HTML5.svg",
+    "category": "Frontend"
+  },
+  {
+    "title": "CSS",
+    "imageSrc": "/skills/CSS3.svg",
+    "category": "Frontend"
+  },
+  {
+    "title": "JavaScript",
+    "imageSrc": "/skills/JavaScript.svg",
+    "category": "Frontend"
+  },
+  {
+    "title": "TypeScript",
+    "imageSrc": "/skills/TypeScript.svg",
+    "category": "Frontend"
+  },
+  {
+    "title": "React",
+    "imageSrc": "/skills/React.svg",
+    "category": "Frontend"
+  },
+  {
+    "title": "Next.js",
+    "imageSrc": "/skills/Next.js.svg",
+    "category": "Frontend"
+  },
+  {
+    "title": "Tailwind CSS",
+    "imageSrc": "/skills/Tailwind CSS.svg",
+    "category": "Frontend"
+  },
+  {
+    "title": "Sass",
+    "imageSrc": "/skills/pngwing.com.png",
+    "category": "Frontend"
+  },
+  {
+    "title": "Shadcn UI",
+    "imageSrc": "/skills/shadcn.svg",
+    "category": "Frontend"
+  },
+  {
+    "title": "Node.js",
+    "imageSrc": "/skills/node.png",
+    "category": "Backend"
+  },
+  {
+    "title": "Prisma",
+    "imageSrc": "/skills/prisma.svg",
+    "category": "Backend"
+  },
+  {
+    "title": "NextAuth",
+    "imageSrc": "/skills/nextauth.png",
+    "category": "Backend"
+  },
+  {
+    "title": "Stripe",
+    "imageSrc": "/skills/stripe.svg",
+    "category": "Backend"
+  },
+  {
+    "title": "MongoDB",
+    "imageSrc": "/skills/mongodb.svg",
+    "category": "Database"
+  },
+  {
+    "title": "PostgreSQL",
+    "imageSrc": "/skills/PostgresSQL.svg",
+    "category": "Database"
+  },
+  {
+    "title": "Firebase",
+    "imageSrc": "/skills/Firebase.svg",
+    "category": "Database"
+  },
+  {
+    "title": "Git",
+    "imageSrc": "/skills/git.png",
+    "category": "DevOps"
+  },
+  {
+    "title": "GitHub",
+    "imageSrc": "/skills/github.png",
+    "category": "DevOps"
+  }
+]

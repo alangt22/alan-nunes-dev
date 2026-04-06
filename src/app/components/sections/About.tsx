@@ -28,14 +28,42 @@ export function About() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </span>
-                Desenvolvedor Full-Stack
+                Desenvolvedor Full Stack
               </h3>
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-                Sou um desenvolvedor full-stack em início de carreira, com uma base sólida em HTML, CSS, JavaScript e ReactJS. Tenho paixão por criar interfaces acessíveis, responsivas e otimizadas em performance, sempre buscando oferecer a melhor experiência para o usuário.
+                Desenvolvedor Full Stack com foco na construção de aplicações SaaS modernas, escaláveis e orientadas a produto. Atuo desde a modelagem do banco de dados e definição da arquitetura até o frontend e deploy em produção.
               </p>
-              <p className="text-gray-400 text-sm sm:text-base leading-relaxed mt-3 sm:mt-4">
-                Venho me aprofundando em ferramentas modernas como Next.js, TailwindCSS e TypeScript, além de estudar testes automatizados. Também possuo noções de Backend, trabalhando com Node.js, NestJS, Express, MongoDB, PostgreSQL e Firebase.
-              </p>
+              <div className="mt-4 space-y-2">
+                <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+                  <span className="text-cyan-400 font-semibold">Experiência em:</span>
+                </p>
+                <ul className="grid grid-cols-2 gap-2 text-sm text-gray-400">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>
+                    APIs RESTful com Node.js e TypeScript
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span>
+                    Autenticação (JWT / NextAuth)
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>
+                    Integração com Stripe
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span>
+                    Prisma + PostgreSQL
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>
+                    Type Safety end-to-end
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span>
+                    Deploy em produção
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <div className="glass rounded-xl sm:rounded-2xl p-5 sm:p-8 card-hover">
@@ -48,7 +76,7 @@ export function About() {
                 Minha Trajetória
               </h3>
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-                Minha trajetória tem sido construída por meio de projetos pessoais e cursos intensivos, onde aplico os conceitos aprendidos na prática e desenvolvo soluções completas. Estou em busca de oportunidades que me permitam aplicar e expandir meus conhecimentos.
+                Minha trajetória tem sido construída por meio de projetos pessoais e cursos intensivos, onde aplico os conceitos aprendidos na prática e desenvolvo soluções completas. Desenvolvi sistemas SaaS com integrações de pagamento, autenticação e arquitetura escalável.
               </p>
             </div>
           </div>
@@ -91,8 +119,8 @@ export function About() {
               </div>
               <div className="glass rounded-xl p-4 sm:p-6">
                 <span className="text-indigo-400 font-semibold text-xs sm:text-sm">Objetivo</span>
-                <h4 className="text-lg sm:text-xl font-bold text-white mt-1">Primeira Oportunidade</h4>
-                <p className="text-gray-400 mt-1 sm:mt-2 text-sm">Buscando uma oportunidade profissional para aplicar conhecimentos e crescer na carreira.</p>
+                <h4 className="text-lg sm:text-xl font-bold text-white mt-1">Oportunidade Profissional</h4>
+                <p className="text-gray-400 mt-1 sm:mt-2 text-sm">Buscando contribuir com equipes de desenvolvimento, aplicando e expandindo conhecimentos em projetos desafiadores.</p>
               </div>
             </div>
           </div>

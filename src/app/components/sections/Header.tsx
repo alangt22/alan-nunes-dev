@@ -15,7 +15,7 @@ export function Header() {
   const [index, setIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
-  const text = "Olá, sou Alan Nunes";
+  const text = "Olá, sou Alan da Silva Nunes";
   const speed = 80;
 
   useEffect(() => {
@@ -65,7 +65,7 @@ export function Header() {
           </p>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 lg:text-center leading-tight">
-            <span className="gradient-text lg:text-5xl">{displayedText}</span>
+            <span className="gradient-text lg:text-4xl">{displayedText}</span>
             <span className="animate-blink text-indigo-500">|</span>
           </h1>
 
@@ -102,7 +102,7 @@ export function Header() {
             </Link>
 
             <Link
-              href="https://drive.google.com"
+              href="https://drive.google.com/file/d/1uM0f4UNYPVh6fBBmvI8GwDykYyV8MSz7/view?usp=sharing"
               target="_blank"
               className={clsx(
                 "relative overflow-hidden",

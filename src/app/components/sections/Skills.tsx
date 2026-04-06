@@ -3,17 +3,28 @@ import { useRef, useEffect, useState } from 'react';
 import type { Skill as SkillType } from '../../types';
 import skills from '../../data/skills.json';
 
-export function Skills (){
+const categoryLabels: Record<string, string> = {
+  Frontend: 'Frontend',
+  Backend: 'Backend',
+  Database: 'Banco de Dados',
+  DevOps: 'DevOps',
+};
+
+const categoryOrder = ['Frontend', 'Backend', 'Database', 'DevOps'];
+
+export function Skills() {
   const skillsRef = useRef<HTMLDivElement>(null);
-  const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
+  const [visibleItems, setVisibleItems] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = Number(entry.target.getAttribute('data-index'));
-            setVisibleItems(prev => new Set([...prev, index]));
+            const id = entry.target.getAttribute('data-id');
+            if (id) {
+              setVisibleItems(prev => new Set([...prev, id]));
+            }
           }
         });
       },
@@ -27,23 +38,22 @@ export function Skills (){
     return () => observer.disconnect();
   }, []);
 
+  const groupedSkills = skills.reduce((acc, skill) => {
+    if (!acc[skill.category]) {
+      acc[skill.category] = [];
+    }
+    acc[skill.category].push(skill);
+    return acc;
+  }, {} as Record<string, SkillType[]>);
+
   return (
     <section className='py-16 sm:py-20 md:py-24 px-4 sm:px-6 relative'>
-            {/* BACKGROUND BLOBS */}
+      {/* BACKGROUND BLOBS */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950" />
-
         <div className="absolute top-20 left-10 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl animate-float"></div>
-
-        <div
-          className="absolute bottom-20 right-10 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "1s" }}
-        ></div>
-
-        <div
-          className="absolute top-1/2 left-1/2 w-60 h-60 bg-purple-500/20 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
-        ></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-purple-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
       </div>
 
       <div className="absolute inset-0 opacity-30 pointer-events-none">
@@ -51,6 +61,7 @@ export function Skills (){
         <div className="absolute bottom-40 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
       </div>
 
+    {/* CONTENT */}
       <div id='skills' className="max-w-6xl mx-auto relative z-10 scroll-mt-20">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
@@ -62,57 +73,52 @@ export function Skills (){
           </p>
         </div>
 
-        <div ref={skillsRef} className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
-          {skills.map((skill: SkillType, index: number) => (
-            <div
-              key={index}
-              data-index={index}
-              className={`skill-item group relative flex flex-col items-center p-3 sm:p-4 md:p-6 rounded-xl sm:rounded-2xl glass card-hover ${
-                visibleItems.has(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-              style={{ transitionDelay: `${index * 50}ms` }}
-            >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 mb-2 sm:mb-3 relative">
-                <img
-                  className='w-full h-full object-contain filter brightness-110 contrast-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-300'
-                  src={skill.imageSrc}
-                  alt={`Ícone de ${skill.title}`}
-                  loading='lazy'
-                />
-              </div>
-              <span className="text-xs sm:text-sm font-medium text-center text-gray-400 group-hover:text-white transition-colors">
-                {skill.title}
-              </span>
-              <div className="absolute inset-0 rounded-xl sm:rounded-2xl border border-transparent group-hover:border-indigo-500/30 transition-colors"></div>
-            </div>
-          ))}
-        </div>
+        <div ref={skillsRef} className="space-y-12">
+          {categoryOrder.map((category) => {
+            const categorySkills = groupedSkills[category];
+            if (!categorySkills) return null;
 
-{/*         <div className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 text-center">
-          <div className="glass rounded-xl p-4 sm:p-6 card-hover">
-            <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1 sm:mb-2">15+</div>
-            <div className="text-gray-400 text-xs sm:text-sm">Tecnologias</div>
-          </div>
-          <div className="glass rounded-xl p-4 sm:p-6 card-hover">
-            <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1 sm:mb-2">10+</div>
-            <div className="text-gray-400 text-xs sm:text-sm">Projetos</div>
-          </div>
-          <div className="glass rounded-xl p-4 sm:p-6 card-hover">
-            <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1 sm:mb-2">2+</div>
-            <div className="text-gray-400 text-xs sm:text-sm">Anos de Estudo</div>
-          </div>
-          <div className="glass rounded-xl p-4 sm:p-6 card-hover">
-            <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1 sm:mb-2">100%</div>
-            <div className="text-gray-400 text-xs sm:text-sm">Dedicação</div>
-          </div>
-        </div> */}
+            return (
+              <div key={category} className="space-y-4">
+                <h3 className="text-xl sm:text-2xl font-semibold text-white text-center">
+                  {categoryLabels[category] || category}
+                </h3>
+                <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6">
+                  {categorySkills.map((skill: SkillType, index: number) => (
+                    <div
+                      key={`${category}-${index}`}
+                      data-id={`${category}-${index}`}
+                      className={`skill-item group relative flex flex-col items-center p-3 sm:p-4 md:p-6 rounded-xl sm:rounded-2xl glass card-hover ${
+                        visibleItems.has(`${category}-${index}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                      }`}
+                      style={{ transitionDelay: `${index * 50}ms` }}
+                    >
+                      <div className="w-10 h-10 lg:w-12 lg:h-12 sm:w-12 sm:h-12 md:w-14 md:h-14 mb-2 sm:mb-3 relative">
+                        <img
+                          className='w-full h-full object-contain filter brightness-110 contrast-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-300'
+                          src={skill.imageSrc}
+                          alt={`Ícone de ${skill.title}`}
+                          loading='lazy'
+                        />
+                      </div>
+                      <span className="text-xs sm:text-sm font-medium text-center text-gray-400 group-hover:text-white transition-colors">
+                        {skill.title}
+                      </span>
+                      <div className="absolute inset-0 rounded-xl sm:rounded-2xl border border-transparent group-hover:border-indigo-500/30 transition-colors"></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
-              <div className="absolute bottom-0  left-1/2 -translate-x-1/2 scroll-indicator sm:block">
-          <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center">
-            <div className="w-1.5 h-3 bg-indigo-500 rounded-full mt-2 animate-bounce"></div>
-          </div>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 scroll-indicator sm:block">
+        <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center">
+          <div className="w-1.5 h-3 bg-indigo-500 rounded-full mt-2 animate-bounce"></div>
         </div>
+      </div>
     </section>
   );
 };
