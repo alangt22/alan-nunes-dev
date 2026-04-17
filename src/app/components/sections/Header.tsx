@@ -181,6 +181,7 @@ export function Header() {
               alt="Foto de perfil"
               width={400}
               height={400}
+              loading="eager"
               className="rounded-full object-cover shadow-2xl animate-float relative z-10 w-full h-full"
             />
           </div>

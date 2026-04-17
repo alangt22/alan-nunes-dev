@@ -82,7 +82,9 @@ const Modal = ({ isOpen, onClose, projeto }: ModalProps) => {
                     key={index} 
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium bg-indigo-500/10 text-indigo-300 border border-indigo-500/20"
                   >
-                    <img src={projeto.skillImages[skill]} alt={skill} className="w-5 h-5" />
+                    {projeto.skillImages[skill] && (
+                      <img src={projeto.skillImages[skill]} alt={skill} className="w-5 h-5" />
+                    )}
                     {skill}
                   </span>
                 ))}

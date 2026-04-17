@@ -1,5 +1,45 @@
 [
   {
+    "title": "AgendaPRO",
+    "imageSrc": "/projects/AgendaPRO.png",
+    "description": "O AgendaPro é uma plataforma SaaS que facilita a gestão de agendamentos para profissionais de diversas áreas, como salões de beleza, estúdios, consultórios, freelas e pequenas empresas.",
+    "skills": ["Next.js", "React", "TypeScript", "TailwindCSS", "PostgreSQL"],
+    "demo": "https://www.agendapro.dev/",
+    "source": "https://github.com/alangt22/Agenda-Pro"
+  },
+  {
+    "title": "EnqueteDev",
+    "imageSrc": "/projects/ENQUETE4.png",
+    "description": "O EnqueteDev é uma plataforma para criação e divulgação de enquetes, desenvolvida com React, Next.js, TypeScript e Tailwind CSS. O projeto oferece uma interface moderna e intuitiva, permitindo que usuários criem enquetes interativas e compartilhem com sua rede.",
+    "skills": ["Next.js", "React", "TypeScript", "TailwindCSS", "PostgreSQL"],
+    "demo": "https://enquete-dun.vercel.app/",
+    "source": "https://github.com/alangt22/Enquete"
+  },
+  {
+    "title": "DevFlow",
+    "imageSrc": "/projects/DevFlow.png",
+    "description": "DevFlow é uma plataforma de gerenciamento de fluxo de trabalho para desenvolvedores, desenvolvida com React, TypeScript e Tailwind CSS. O projeto oferece uma interface moderna e intuitiva, permitindo que usuários gerenciem tarefas, projetos e colaborações de forma eficiente.",
+    "skills": ["Next.js", "React", "TypeScript", "TailwindCSS", "PostgreSQL"],
+    "demo": "https://dev-flow-blue.vercel.app/",
+    "source": "https://github.com/alangt22/DevFlow"
+  },
+  {
+    "title": "SujeitoPizza",
+    "imageSrc": "/projects/pizza1.png",
+    "description": "SujeitoPizza é uma plataforma de delivery de pizzas, desenvolvida com React, TypeScript e firebase. O projeto oferece uma interface moderna e funcional, permitindo que usuários realizem pedidos online e acompanhem o status dos mesmos.",
+    "skills": ["Next.js", "React", "TypeScript", "TailwindCSS", "Firebase"],
+    "demo": "https://pizzaria-web-teal.vercel.app/",
+    "source": "https://github.com/alangt22/Pizzaria-frontend"
+  },
+  {
+    "title": "BarberPRO",
+    "imageSrc": "/projects/barberpro.png",
+    "description": "Plataforma de agendamento para salões de beleza, desenvolvida com React, TypeScript e Tailwind CSS.",
+    "skills": ["Next.js", "React", "TypeScript", "TailwindCSS", "PostgreSQL"],
+    "demo": "https://frontend-barber-pro.vercel.app/",
+    "source": "https://github.com/alangt22/Frontend-BarberPRO"
+  },
+  {
     "title": "ALNMotors",
     "imageSrc": "/projects/alnmotors.png",
     "description": "ALNMotors é uma plataforma de e-commerce para compra e venda de carros, desenvolvida com React, TypeScript e firebase. O projeto oferece uma interface moderna e funcional, permitindo que usuários anunciem veículos, busquem por modelos específicos e entrem em contato direto com vendedores.",
@@ -8,37 +48,12 @@
     "source": "https://github.com/alangt22/WebCarros"
   },
   {
-    "title": "AgendaPRO",
-    "imageSrc": "/projects/AgendaPRO.png",
-    "description": "O AgendaPro é uma plataforma SaaS que facilita a gestão de agendamentos para profissionais de diversas áreas, como salões de beleza, estúdios, consultórios, freelas e pequenas empresas.",
-    "skills": ["React", "Next", "TypeScript", "Tailwind", "PostgreSQL"],
-    "demo": "https://www.agendapro.dev/",
-    "source": "https://github.com/alangt22/Agenda-Pro"
-  },
-  {
     "title": "GET A PET",
     "imageSrc": "/projects/get a pet.png",
     "description": "Get a Pet é uma plataforma web desenvolvida para facilitar a conexão entre pessoas interessadas em adotar animais e responsáveis por pets disponíveis. O projeto oferece uma interface simples, intuitiva e totalmente responsiva, garantindo uma ótima experiência em qualquer dispositivo.",
-    "skills": ["React", "Node", "JavaScript", "mongoDB"],
+    "skills": ["React", "Node.js", "JavaScript", "MongoDB"],
     "demo": "https://get-a-pet-aln.netlify.app/",
     "source": "https://github.com/alangt22/Get_a_Pet---FrontEnd"
-  },
-
-  {
-    "title": "ApoiaDev",
-    "imageSrc": "/projects/apoia4.png",
-    "description": "ApoiaDEV é uma plataforma pensada para criadores de conteúdo que desejam receber apoio financeiro de forma simples e personalizada. Com uma interface moderna e intuitiva, o projeto permite que cada criador crie sua própria página de doações com identidade visual única.",
-    "skills": ["React", "Next", "TypeScript", "Tailwind", "PostgreSQL"],
-    "demo": "https://apoia-dev-brown.vercel.app/",
-    "source": "https://github.com/alangt22/apoia-dev"
-  },
-  {
-    "title": "Carrinho de Compras",
-    "imageSrc": "/projects/carrinho.png",
-    "description": "Um carrinho de compras moderno para petshop, feito com React, TypeScript, Tailwind CSS, React Router DOM, Toast e ShadCN UIO projeto simula a experiência de navegação e compra de produtos voltados para pets, com foco em performance, acessibilidade e uma boa experiência de usuário.",
-    "skills": ["React", "Tailwind", "TypeScript"],
-    "demo": "https://petshop-dev-psi.vercel.app/",
-    "source": "https://github.com/alangt22/petshopDEV"
   },
   {
     "title": "DevLink",
@@ -47,37 +62,5 @@
     "skills": ["React", "Tailwind", "TypeScript", "Firebase"],
     "demo": "https://linketree-three.vercel.app/",
     "source": "https://github.com/alangt22/Linketree"
-  },
-  {
-    "title": "QUIZ PROGRAMAÇÃO",
-    "imageSrc": "/projects/quiz.png",
-    "description": "Aplicação interativa de quiz com perguntas de programação. Teste seus conhecimentos em tempo real com feedback instantâneo.",
-    "skills": ["React", "JavaScript", "CSS"],
-    "demo": "https://quiz-curso.netlify.app/",
-    "source": "https://github.com/alangt22/quiz_react-Curso"
-  },
-  {
-    "title": "DEV BURGER",
-    "imageSrc": "/projects/dev bg.png",
-    "description": "Cardápio digital para hamburgueria com design responsivo. Interface simples e moderna para facilitar a visualização dos produtos.",
-    "skills": ["HTML", "JavaScript", "Tailwind"],
-    "demo": "https://alnburguer-2.netlify.app/",
-    "source": "https://github.com/alangt22/cardapio-2"
-  },
-  {
-    "title": "PetDev",
-    "imageSrc": "/projects/petdev.png",
-    "description": "Landing page moderna para desenvolvedores pet lovers, com links de contato integrados e design responsivo.",
-    "skills": ["Next", "TypeScript", "Tailwind"],
-    "demo": "https://pet-dev.netlify.app/",
-    "source": "https://github.com/alangt22/PetDev"
-  },
-  {
-    "title": "BARBER DEV",
-    "imageSrc": "/projects/barber.JPG",
-    "description": "Landing page elegante para barbearia, com links de contato, layout responsivo e estilo moderno utilizando Sass.",
-    "skills": ["HTML", "Sass", "JavaScript"],
-    "demo": "https://barbeariadev.netlify.app/",
-    "source": "https://github.com/alangt22/Barbearia"
   }
 ]
