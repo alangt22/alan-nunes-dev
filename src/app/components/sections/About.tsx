@@ -28,39 +28,39 @@ export function About() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </span>
-                Desenvolvedor Full Stack
+                Desenvolvedor Full Stack Jr.
               </h3>
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-                Desenvolvedor Full Stack com foco na construção de aplicações SaaS modernas, escaláveis e orientadas a produto. Atuo desde a modelagem do banco de dados e definição da arquitetura até o frontend e deploy em produção.
+                Desenvolvedor Full Stack com mais de 2 anos de experiência em desenvolvimento web. Formado em Análise e Desenvolvimento de Sistemas, desenvolvo aplicações completas com foco em soluções SaaS, desde o planejamento até o deploy em produção.
               </p>
               <div className="mt-4 space-y-2">
                 <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-                  <span className="text-cyan-400 font-semibold">Experiência em:</span>
+                  <span className="text-cyan-400 font-semibold">Stack principal:</span>
                 </p>
                 <ul className="grid grid-cols-2 gap-2 text-sm text-gray-400">
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>
-                    APIs RESTful com Node.js e TypeScript
+                    Next.js & React
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span>
-                    Autenticação (JWT / NextAuth)
+                    TypeScript
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>
-                    Integração com Stripe
+                    Node.js & APIs
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span>
-                    Prisma + PostgreSQL
+                    PostgreSQL & Prisma
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>
-                    Type Safety end-to-end
+                    TailwindCSS
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span>
-                    Deploy em produção
+                    Git & Deploy
                   </li>
                 </ul>
               </div>
@@ -70,14 +70,37 @@ export function About() {
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-indigo-400 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
                 <span className='w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0'>
                   <svg className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </span>
-                Minha Trajetória
+                Soft Skills
               </h3>
-              <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-                Minha trajetória tem sido construída por meio de projetos pessoais e cursos intensivos, onde aplico os conceitos aprendidos na prática e desenvolvo soluções completas. Desenvolvi sistemas SaaS com integrações de pagamento, autenticação e arquitetura escalável.
-              </p>
+              <ul className="grid grid-cols-2 gap-3 text-sm text-gray-400">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span>
+                  Comunicação
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>
+                  Trabalho em equipe
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span>
+                  Proatividade
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>
+                  Adaptabilidade
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span>
+                  Resolução de problemas
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>
+                  Foco em resultados
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -91,10 +114,10 @@ export function About() {
                 </svg>
               </div>
               <div className="glass rounded-xl p-4 sm:p-6">
-                <span className="text-indigo-400 font-semibold text-xs sm:text-sm">2023 - 2025</span>
+                <span className="text-indigo-400 font-semibold text-xs sm:text-sm">Formação</span>
                 <h4 className="text-lg sm:text-xl font-bold text-white mt-1">Análise e Desenvolvimento de Sistemas</h4>
-                <p className="text-gray-400 mt-1 sm:mt-2 text-sm">Universidade Cruzeiro do Sul EAD</p>
-                <p className="text-gray-500 text-xs sm:text-sm">Guarulhos - SP</p>
+                <p className="text-gray-400 mt-1 sm:mt-2 text-sm">Universidade Cruzeiro do Sul</p>
+                <p className="text-gray-500 text-xs sm:text-sm">2023 - 2025</p>
               </div>
             </div>
 
@@ -105,9 +128,9 @@ export function About() {
                 </svg>
               </div>
               <div className="glass rounded-xl p-4 sm:p-6">
-                <span className="text-cyan-400 font-semibold text-xs sm:text-sm">2026 - Atual</span>
-                <h4 className="text-lg sm:text-xl font-bold text-white mt-1">Projetos Pessoais</h4>
-                <p className="text-gray-400 mt-1 sm:mt-2 text-sm">Desenvolvimento de aplicações full-stack com React, Next.js, Node.js e bancos de dados.</p>
+                <span className="text-cyan-400 font-semibold text-xs sm:text-sm">O que me define</span>
+                <h4 className="text-lg sm:text-xl font-bold text-white mt-1">Aprendizado Contínuo</h4>
+                <p className="text-gray-400 mt-1 sm:mt-2 text-sm">Estudo diariamente, busco feedbacks e estou sempre iterando nos projetos para melhorar код и качество.</p>
               </div>
             </div>
 
@@ -119,18 +142,13 @@ export function About() {
               </div>
               <div className="glass rounded-xl p-4 sm:p-6">
                 <span className="text-indigo-400 font-semibold text-xs sm:text-sm">Objetivo</span>
-                <h4 className="text-lg sm:text-xl font-bold text-white mt-1">Oportunidade Profissional</h4>
-                <p className="text-gray-400 mt-1 sm:mt-2 text-sm">Buscando contribuir com equipes de desenvolvimento, aplicando e expandindo conhecimentos em projetos desafiadores.</p>
+                <h4 className="text-lg sm:text-xl font-bold text-white mt-1">Minha Primeira Vaga</h4>
+                <p className="text-gray-400 mt-1 sm:mt-2 text-sm">Procuro uma oportunidade para contribuir em uma equipe, aplicar meus conhecimentos e crescer profissionalmente. Estou pronto para aprender e colaborar!</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 scroll-indicator sm:block">
-          <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center">
-            <div className="w-1.5 h-3 bg-indigo-500 rounded-full mt-2 animate-bounce"></div>
-          </div>
-        </div>
     </section>
   );
 };

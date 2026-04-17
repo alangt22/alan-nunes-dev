@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Sora } from "next/font/google";
 import "./globals.css";
 import {Navbar} from "./components/layout/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sora = Sora({
+  variable: "--font-satoshi",
   subsets: ["latin"],
+  display: "swap",
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 
 export const metadata: Metadata = {
   title: "Alan Nunes | Desenvolvedor Full Stack",
@@ -47,7 +42,7 @@ export const metadata: Metadata = {
     description:
       "Confira meus projetos, experiências e habilidades como desenvolvedor Full Stack.",
     url: process.env.NEXT_PUBLIC_URL,
-    siteName: "Alan Nunes Portfolio",
+    siteName: "Nunes Portfolio",
     images: [
       {
         url: `${process.env.NEXT_PUBLIC_URL}/og-image.png`,
@@ -73,11 +68,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="pt-BR"
-
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="pt-BR" className={`${sora.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
