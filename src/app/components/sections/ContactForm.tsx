@@ -88,7 +88,7 @@ export function ContactForm() {
 
         <button
           type="submit"
-          className="w-full btn-primary py-3 sm:py-4 rounded-lg sm:rounded-xl text-white font-semibold flex items-center justify-center gap-2 relative z-10 text-sm sm:text-base"
+          className="w-full bg-indigo-600 cursor-pointer hover:bg-indigo-700 py-3 sm:py-4 rounded-lg sm:rounded-xl text-white font-semibold flex items-center justify-center gap-2 relative z-10 text-sm sm:text-base"
           disabled={state.submitting || isSubmitting}
           aria-busy={state.submitting || isSubmitting}
         >

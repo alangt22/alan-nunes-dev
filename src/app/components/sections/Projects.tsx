@@ -153,7 +153,7 @@ export function Projects() {
                 <div className="flex gap-3">
                   <button
                     onClick={() => openModal(projeto)}
-                    className="flex-1 py-2.5 md:py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold transition-all flex items-center justify-center gap-2 group/btn"
+                    className="flex-1 cursor-pointer py-2.5 md:py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold transition-all flex items-center justify-center gap-2 group/btn"
                   >
                     <span>Detalhes</span>
                     <svg className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

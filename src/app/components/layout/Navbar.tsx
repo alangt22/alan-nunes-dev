@@ -69,7 +69,7 @@ export function Navbar() {
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={(e) => handleLinkClick(e, link.id)}
-                className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+                className="text-sm font-bold text-white hover:text-indigo-400 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(37,99,235,0.6)] transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -77,14 +77,31 @@ export function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="https://www.linkedin.com/in/alannunes22"
+            <Link
+              href="https://api.whatsapp.com/send/?phone=5511991219689"
               target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary px-5 py-2 rounded-full text-white text-sm font-medium"
+              className={clsx(
+                "relative overflow-hidden",
+                "bg-green-500 hover:bg-green-600",
+                "px-2 py-2 rounded-full text-white/80 font-semibold",
+                "flex items-center justify-center gap-1",
+
+                "transition-all duration-300 ease-out",
+                "hover:scale-105",
+
+                "shadow-md hover:shadow-lg",
+                "hover:shadow-green-500/40",
+
+                "before:absolute before:inset-0",
+                "before:bg-gradient-to-r before:from-transparent before:via-white/40 before:to-transparent",
+                "before:translate-x-[-100%]",
+                "before:transition-transform before:duration-700",
+                "hover:before:translate-x-[100%]",
+              )}
             >
-              Contrate-me
-            </a>
+              <FontAwesomeIcon icon={faWhatsapp} />
+              Contato
+            </Link>
           </div>
 
           <button

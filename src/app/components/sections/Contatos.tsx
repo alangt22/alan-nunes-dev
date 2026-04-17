@@ -35,8 +35,7 @@ export function Contatos() {
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-5 sm:mb-6">Informações de Contato</h3>
               
               <div className="space-y-4 sm:space-y-5">
-                <a 
-                  href="mailto:alansilva2896@gmail.com"
+                <span 
                   className="flex items-center gap-3 sm:gap-4 text-gray-400 hover:text-indigo-400 transition-colors group"
                 >
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center group-hover:bg-indigo-500/30 transition-colors flex-shrink-0">
@@ -45,7 +44,7 @@ export function Contatos() {
                     </svg>
                   </div>
                   <span className="text-sm sm:text-base truncate">alansilva2896@gmail.com</span>
-                </a>
+                </span>
 
                 <a 
                   href="https://api.whatsapp.com/send/?phone=5511991219689"

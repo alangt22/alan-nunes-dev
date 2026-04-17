@@ -1,24 +1,23 @@
 import { faCopyright, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaCopyright } from 'react-icons/fa';
 
 export function Footer() {
   return (
     <footer className="bg-zinc-900 text-gray-400">
         
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
-          <div className="flex items-center gap-2 text-gray-400 text-xs sm:text-sm">
-            <FontAwesomeIcon icon={faCopyright} />
-            <span>{new Date().getFullYear()} Alan Nunes. Feito com</span>
-            <FontAwesomeIcon icon={faHeart} className="text-red-500" />
-            <span>usando React</span>
-          </div>
-          <a
+      <div className="max-w-6xl flex flex-col items-center justify-between gap-4 py-6 mx-auto px-4 sm:px-6 md:flex-row">
+        <div className="flex items-center gap-2 text-gray-400 text-xs sm:text-sm">
+                    <a
             href="#home"
             className="text-xl sm:text-2xl font-bold gradient-text hover:opacity-80 transition-opacity"
           >
             AN
           </a>
+          <div className="flex items-center gap-2 text-gray-400 text-xs sm:text-sm">
+            <FaCopyright className="text-gray-400" />
+            <span>{new Date().getFullYear()} Alan Nunes. Todos os direitos reservados.</span>
+          </div>
         </div>
       </div>
     </footer>
