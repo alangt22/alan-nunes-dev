@@ -60,7 +60,7 @@ export function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
           <a href="#home" className="text-2xl font-bold gradient-text">
-            AN
+            {"<"}AN{"/>"}
           </a>
 
           <div className="hidden lg:flex items-center gap-8">

@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import {ContactForm} from './ContactForm';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -36,12 +37,10 @@ export function Contatos() {
               
               <div className="space-y-4 sm:space-y-5">
                 <span 
-                  className="flex items-center gap-3 sm:gap-4 text-gray-400 hover:text-indigo-400 transition-colors group"
+                  className="flex cursor-pointer items-center gap-3 sm:gap-4 text-gray-400 hover:text-indigo-400 transition-colors group"
                 >
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center group-hover:bg-indigo-500/30 transition-colors flex-shrink-0">
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
+                    <FontAwesomeIcon icon={faEnvelope} className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <span className="text-sm sm:text-base truncate">alansilva2896@gmail.com</span>
                 </span>

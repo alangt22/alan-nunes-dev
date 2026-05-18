@@ -1,92 +1,110 @@
 [
   {
-    "title": "HTML",
-    "imageSrc": "/skills/HTML5.svg",
-    "category": "Frontend"
-  },
-  {
-    "title": "CSS",
-    "imageSrc": "/skills/CSS3.svg",
-    "category": "Frontend"
-  },
-  {
-    "title": "JavaScript",
-    "imageSrc": "/skills/JavaScript.svg",
-    "category": "Frontend"
-  },
-  {
-    "title": "TypeScript",
-    "imageSrc": "/skills/TypeScript.svg",
-    "category": "Frontend"
-  },
-  {
     "title": "React",
     "imageSrc": "/skills/React.svg",
-    "category": "Frontend"
+    "category": "Frontend",
+    "usage": "Interfaces componentizadas, gerenciamento de estado com Context API e hooks customizados"
   },
   {
     "title": "Next.js",
     "imageSrc": "/skills/Next.js.svg",
-    "category": "Frontend"
+    "category": "Frontend",
+    "usage": "SSR, API Routes, App Router, Server Components e Static Site Generation"
+  },
+  {
+    "title": "TypeScript",
+    "imageSrc": "/skills/TypeScript.svg",
+    "category": "Frontend",
+    "usage": "Tipagem estática, interfaces, generics e type safety em toda a aplicação"
   },
   {
     "title": "TailwindCSS",
     "imageSrc": "/skills/Tailwind CSS.svg",
-    "category": "Frontend"
+    "category": "Frontend",
+    "usage": "Design responsivo, animações, dark mode e design system"
+  },
+  {
+    "title": "HTML",
+    "imageSrc": "/skills/HTML5.svg",
+    "category": "Frontend",
+    "usage": "Estrutura semântica, accessibility (ARIA) e SEO"
+  },
+  {
+    "title": "CSS",
+    "imageSrc": "/skills/CSS3.svg",
+    "category": "Frontend",
+    "usage": "Flexbox, Grid, transições e animações CSS"
+  },
+  {
+    "title": "JavaScript",
+    "imageSrc": "/skills/JavaScript.svg",
+    "category": "Frontend",
+    "usage": "Lógica client-side, manipulação do DOM e Fetch API"
   },
   {
     "title": "Sass",
     "imageSrc": "/skills/pngwing.com.png",
-    "category": "Frontend"
+    "category": "Frontend",
+    "usage": "Variáveis, mixins, nesting e pré-processamento CSS"
   },
   {
     "title": "Shadcn UI",
     "imageSrc": "/skills/shadcn.svg",
-    "category": "Frontend"
+    "category": "Frontend",
+    "usage": "Componentes acessíveis, Radix UI primitives, theming e customização"
   },
   {
     "title": "Node.js",
     "imageSrc": "/skills/node.png",
-    "category": "Backend"
+    "category": "Backend",
+    "usage": "Servidor Express, API Routes do Next.js e server-side logic"
   },
   {
     "title": "Prisma",
     "imageSrc": "/skills/prisma.svg",
-    "category": "Backend"
+    "category": "Backend",
+    "usage": "ORM type-safe, migrations, seeders e relações entre modelos"
   },
   {
     "title": "NextAuth",
     "imageSrc": "/skills/nextauth.png",
-    "category": "Backend"
+    "category": "Backend",
+    "usage": "Autenticação OAuth (Google, GitHub), credentials e session management"
   },
   {
     "title": "Stripe",
     "imageSrc": "/skills/stripe.svg",
-    "category": "Backend"
-  },
-  {
-    "title": "MongoDB",
-    "imageSrc": "/skills/mongodb.svg",
-    "category": "Database"
+    "category": "Backend",
+    "usage": "Checkout sessions, subscriptions, webhooks e integração com banco"
   },
   {
     "title": "PostgreSQL",
     "imageSrc": "/skills/PostgresSQL.svg",
-    "category": "Database"
+    "category": "Database",
+    "usage": "Banco relacional, queries complexas, JOINs e transações"
+  },
+  {
+    "title": "MongoDB",
+    "imageSrc": "/skills/mongodb.svg",
+    "category": "Database",
+    "usage": "NoSQL, aggregations, schemas dinâmicos e embedded documents"
   },
   {
     "title": "Firebase",
     "imageSrc": "/skills/Firebase.svg",
-    "category": "Database"
+    "category": "Database",
+    "usage": "Realtime Database, Firestore, Auth e Cloud Functions"
   },
   {
     "title": "Git",
     "imageSrc": "/skills/git.png",
-    "category": "DevOps"
+    "category": "DevOps",
+    "usage": "Controle de versão, branching strategy, merge e rebase"
   },
   {
     "title": "GitHub",
     "imageSrc": "/skills/github.png",
-    "category": "DevOps"
+    "category": "DevOps",
+    "usage": "CI/CD com Actions, code review, issues e project management"
   }
 ]

@@ -43,7 +43,7 @@
     "title": "ALNMotors",
     "imageSrc": "/projects/alnmotors.png",
     "description": "ALNMotors é uma plataforma de e-commerce para compra e venda de carros, desenvolvida com React, TypeScript e firebase. O projeto oferece uma interface moderna e funcional, permitindo que usuários anunciem veículos, busquem por modelos específicos e entrem em contato direto com vendedores.",
-    "skills": ["React", "TypeScript", "Tailwind", "Firebase"],
+    "skills": ["React", "TypeScript", "TailwindCSS", "Firebase"],
     "demo": "https://web-carros-seven.vercel.app/",
     "source": "https://github.com/alangt22/WebCarros"
   },
@@ -59,7 +59,7 @@
     "title": "DevLink",
     "imageSrc": "/projects/devlink.png",
     "description": "O Linketree é um projeto inspirado no Linktree, que permite centralizar múltiplos links em uma única página personalizada. Ideal para perfis de redes sociais, portfólios, marcas pessoais e pequenas empresas.",
-    "skills": ["React", "Tailwind", "TypeScript", "Firebase"],
+    "skills": ["React", "TailwindCSS", "TypeScript", "Firebase"],
     "demo": "https://linketree-three.vercel.app/",
     "source": "https://github.com/alangt22/Linketree"
   }

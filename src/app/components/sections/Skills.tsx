@@ -12,6 +12,17 @@ const categoryLabels: Record<string, string> = {
 
 const categoryOrder = ['Frontend', 'Backend', 'Database', 'DevOps'];
 
+const softSkills = [
+  { title: 'Comunicação', description: 'Capacidade de expressar ideias de forma clara e eficiente', icon: '💬' },
+  { title: 'Trabalho em Equipe', description: 'Colaboração efetiva em times multidisciplinares', icon: '🤝' },
+  { title: 'Resolução de Problemas', description: 'Análise e solução de desafios técnicos complexos', icon: '🧩' },
+  { title: 'Adaptabilidade', description: 'Flexibilidade para aprender novas tecnologias e metodologias', icon: '🔄' },
+  { title: 'Proatividade', description: 'Iniciativa para propor soluções e melhorias', icon: '⚡' },
+  { title: 'Pensamento Crítico', description: 'Análise objetiva para tomada de decisões técnicas', icon: '🎯' },
+  { title: 'Gestão de Tempo', description: 'Organização e priorização de tarefas e prazos', icon: '⏱️' },
+  { title: 'Empatia', description: 'Compreensão das necessidades de usuários e colaboradores', icon: '❤️' },
+];
+
 export function Skills() {
   const skillsRef = useRef<HTMLDivElement>(null);
   const [visibleItems, setVisibleItems] = useState<Set<string>>(new Set());
@@ -48,63 +59,62 @@ export function Skills() {
 
   return (
     <section className='py-16 sm:py-20 md:py-24 px-4 sm:px-6 relative'>
-      {/* BACKGROUND BLOBS */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950" />
-        <div className="absolute top-20 left-10 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-purple-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute top-20 left-10 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
       </div>
 
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="absolute top-40 left-10 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-40 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
-      </div>
-
-    {/* CONTENT */}
       <div id='skills' className="max-w-6xl mx-auto relative z-10 scroll-mt-20">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             <span className="gradient-text">Skills & Tecnologias</span>
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 mx-auto rounded-full mb-4 sm:mb-6"></div>
-          <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base px-4">
-            Tecnologias que uso para criar soluções modernas e eficientes
+          <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">
+            Tecnologias que domino e como as aplico em projetos reais
           </p>
         </div>
 
-        <div ref={skillsRef} className="space-y-12">
+        <div ref={skillsRef} className="space-y-10">
           {categoryOrder.map((category) => {
             const categorySkills = groupedSkills[category];
             if (!categorySkills) return null;
 
             return (
-              <div key={category} className="space-y-4">
-                <h3 className="text-xl sm:text-2xl font-semibold text-white text-center">
-                  {categoryLabels[category] || category}
-                </h3>
-                <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6">
+              <div key={category}>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-3 h-3 rounded-full bg-indigo-500"></div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white">
+                    {categoryLabels[category] || category}
+                  </h3>
+                  <div className="h-px flex-1 bg-gradient-to-r from-indigo-500/50 to-transparent"></div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                   {categorySkills.map((skill: SkillType, index: number) => (
                     <div
                       key={`${category}-${index}`}
                       data-id={`${category}-${index}`}
-                      className={`skill-item group relative flex flex-col items-center p-3 sm:p-4 md:p-6 rounded-xl sm:rounded-2xl glass card-hover ${
+                      className={`skill-item group bg-zinc-900 relative p-4 sm:p-5 rounded-xl sm:rounded-2xl glass card-hover ${
                         visibleItems.has(`${category}-${index}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                       }`}
                       style={{ transitionDelay: `${index * 50}ms` }}
                     >
-                      <div className="w-10 h-10 lg:w-12 lg:h-12 sm:w-12 sm:h-12 md:w-14 md:h-14 mb-2 sm:mb-3 relative">
-                        <img
-                          className='w-full h-full object-contain filter brightness-110 contrast-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-300'
-                          src={skill.imageSrc}
-                          alt={`Ícone de ${skill.title}`}
-                          loading='lazy'
-                        />
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl bg-zinc-800/50 shrink-0">
+                          <img
+                            className='w-8 h-8 sm:w-10 sm:h-10 object-contain'
+                            src={skill.imageSrc}
+                            alt={skill.title}
+                            loading='lazy'
+                          />
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <h4 className="text-base sm:text-lg font-semibold text-white mb-1">{skill.title}</h4>
+                          <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">{skill.usage}</p>
+                        </div>
                       </div>
-                      <span className="text-xs sm:text-sm font-medium text-center text-gray-400 group-hover:text-white transition-colors">
-                        {skill.title}
-                      </span>
-                      <div className="absolute inset-0 rounded-xl sm:rounded-2xl border border-transparent group-hover:border-indigo-500/30 transition-colors"></div>
                     </div>
                   ))}
                 </div>
@@ -112,11 +122,32 @@ export function Skills() {
             );
           })}
         </div>
-      </div>
 
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 scroll-indicator sm:block">
-        <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center">
-          <div className="w-1.5 h-3 bg-indigo-500 rounded-full mt-2 animate-bounce"></div>
+        <div className="mt-16 pt-12 border-t border-gray-800/50">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-3 h-3 rounded-full bg-cyan-500"></div>
+            <h3 className="text-xl sm:text-2xl font-bold text-white">
+              Soft Skills
+            </h3>
+            <div className="h-px flex-1 bg-gradient-to-r from-cyan-500/50 to-transparent"></div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {softSkills.map((skill, index) => (
+              <div
+                key={index}
+                className="group p-5 rounded-xl sm:rounded-2xl glass card-hover"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl sm:text-3xl">{skill.icon}</span>
+                  <div>
+                    <h4 className="text-base font-semibold text-white">{skill.title}</h4>
+                    <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">{skill.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

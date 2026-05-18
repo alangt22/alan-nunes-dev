@@ -130,7 +130,7 @@ export function About() {
               <div className="glass rounded-xl p-4 sm:p-6">
                 <span className="text-cyan-400 font-semibold text-xs sm:text-sm">O que me define</span>
                 <h4 className="text-lg sm:text-xl font-bold text-white mt-1">Aprendizado Contínuo</h4>
-                <p className="text-gray-400 mt-1 sm:mt-2 text-sm">Estudo diariamente, busco feedbacks e estou sempre iterando nos projetos para melhorar код и качество.</p>
+                <p className="text-gray-400 mt-1 sm:mt-2 text-sm">Estudo diariamente, busco feedbacks e estou sempre iterando nos projetos para melhorar minhas habilidades.</p>
               </div>
             </div>
 

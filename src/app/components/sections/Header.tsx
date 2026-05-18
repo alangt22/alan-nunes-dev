@@ -12,11 +12,18 @@ import clsx from "clsx";
 
 export function Header() {
   const [displayedText, setDisplayedText] = useState("");
+  const [displayedStack, setDisplayedStack] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
   const [index, setIndex] = useState(0);
+  const [indexStack, setIndexStack] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
   const text = "Olá, sou Alan da Silva Nunes";
+  const stack = "Desenvolvedor\nFull-Stack";
   const speed = 80;
+  const speedStack = 100;
+  const breakStack = 1000;
+  const messageWhatsapp = "Olá, Alan! Vi seu portfólio e gostaria de conversar sobre oportunidades de trabalho. Você está disponível?";
 
   useEffect(() => {
     setIsVisible(true);
@@ -31,6 +38,34 @@ export function Header() {
       return () => clearTimeout(timer);
     }
   }, [index, text]);
+
+  useEffect(() => {
+    let timer: string | number | NodeJS.Timeout | undefined;
+
+    if (!isDeleting && indexStack < stack.length) {
+      // escrevendo
+      timer = setTimeout(() => {
+        setDisplayedStack((prev) => prev + stack[indexStack]);
+        setIndexStack((prev) => prev + 1);
+      }, speedStack);
+    } else if (!isDeleting && indexStack === stack.length) {
+      // pausa antes de apagar
+      timer = setTimeout(() => {
+        setIsDeleting(true);
+      }, breakStack);
+    } else if (isDeleting && indexStack > 0) {
+      // apagando
+      timer = setTimeout(() => {
+        setDisplayedStack((prev) => prev.slice(0, -1));
+        setIndexStack((prev) => prev - 1);
+      }, speedStack / 2); // apagar mais rápido fica mais natural
+    } else if (isDeleting && indexStack === 0) {
+      // recomeça
+      setIsDeleting(false);
+    }
+
+    return () => clearTimeout(timer);
+  }, [indexStack, isDeleting, stack]);
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 bg-zinc-950">
@@ -60,14 +95,17 @@ export function Header() {
       >
         {/* LEFT SIDE */}
         <div className="flex-1 text-center lg:text-left max-w-xl lg:max-w-2xl">
-          <p className="text-cyan-400 text-center font-medium mb-4 tracking-wider uppercase text-xs sm:text-sm">
-            Desenvolvedor Full-Stack
-          </p>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 lg:text-center leading-tight">
-            <span className="gradient-text lg:text-4xl">{displayedText}</span>
+          <h1 className="text-2xl sm:text-2xl md:text-6xl lg:text-7xl font-black mb-6 lg:text-center leading-tight">
+            <span className="gradient-text lg:text-4xl animate-pulse">
+              {displayedText}
+            </span>
             <span className="animate-blink text-indigo-500">|</span>
           </h1>
+
+          <p className="text-cyan-400 text-center font-extrabold mb-4 tracking-tighter uppercase h-18 text-3xl sm:text-4xl whitespace-pre-line">
+            {displayedStack}
+            <span className="animate-blink ml-1">|</span>
+          </p>
 
           <p className="text-gray-400 text-base sm:text-lg md:text-xl mb-8 max-w-lg mx-auto lg:text-center leading-relaxed">
             Transformando ideias em experiências digitais modernas,
@@ -76,7 +114,7 @@ export function Header() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-center mb-8">
             <Link
-              href="https://api.whatsapp.com/send/?phone=5511991219689"
+              href={`https://api.whatsapp.com/send/?phone=5511991219689/&text=${messageWhatsapp}&app_absent=0`}
               target="_blank"
               className={clsx(
                 "relative overflow-hidden",
@@ -101,9 +139,10 @@ export function Header() {
               WhatsApp
             </Link>
 
-            <Link
-              href="https://drive.google.com/file/d/1uM0f4UNYPVh6fBBmvI8GwDykYyV8MSz7/view?usp=sharing"
+            <a
+              href="/curriculo.pdf"
               target="_blank"
+              rel="noopener noreferrer"
               className={clsx(
                 "relative overflow-hidden",
                 "bg-indigo-500 hover:bg-indigo-600",
@@ -123,12 +162,12 @@ export function Header() {
                 "hover:before:translate-x-[100%]",
               )}
             >
-              Ver Currículo
-            </Link>
+              Baixar Currículo
+            </a>
           </div>
 
           <nav className="flex gap-6 justify-center lg:justify-center">
-            <Link href="https://api.whatsapp.com" target="_blank">
+            <Link href="https://api.whatsapp.com/send/?phone=5511991219689" target="_blank">
               <FontAwesomeIcon
                 className={clsx(
                   "text-3xl text-gray-400",
@@ -141,7 +180,7 @@ export function Header() {
               />
             </Link>
 
-            <Link href="https://linkedin.com" target="_blank">
+            <Link href="https://www.linkedin.com/in/alannunes22/" target="_blank">
               <FontAwesomeIcon
                 className={clsx(
                   "text-3xl text-gray-400",
@@ -154,7 +193,7 @@ export function Header() {
               />
             </Link>
 
-            <a href="https://github.com" target="_blank">
+            <a href="https://github.com/alangt22" target="_blank">
               <FontAwesomeIcon
                 className={clsx(
                   "text-3xl text-gray-400",
@@ -196,7 +235,7 @@ export function Header() {
           </a>
         </div>
 
-        <div className="absolute bottom-0 md:-bottom-17 left-1/2 -translate-x-1/2 scroll-indicator sm:block">
+        <div className="absolute bottom-0 md:-bottom-14 left-1/2 -translate-x-1/2 scroll-indicator sm:block">
           <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center">
             <div className="w-1.5 h-3 bg-indigo-500 rounded-full mt-2 animate-bounce"></div>
           </div>
