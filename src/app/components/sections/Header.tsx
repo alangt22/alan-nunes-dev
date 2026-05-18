@@ -68,7 +68,7 @@ export function Header() {
   }, [indexStack, isDeleting, stack]);
 
   return (
-    <section className="min-h-screen bg-red-500 flex items-center justify-center relative overflow-hidden pt-16 bg-zinc-950 w-100">
+    <section className="min-h-screen bg-red-500 flex items-center justify-center relative overflow-hidden pt-16 bg-zinc-950 w-100 lg:w-full">
       {/* BACKGROUND BLOBS */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950" />

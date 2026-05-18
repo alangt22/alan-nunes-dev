@@ -7,7 +7,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export function Contatos() {
   return (
-    <section className='py-16 sm:py-20 md:py-24 px-4 sm:px-6 relative w-100'>
+    <section className='py-16 sm:py-20 md:py-24 px-4 sm:px-6 relative w-100 lg:w-full'>
             {/* BACKGROUND BLOBS */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950" />

@@ -52,7 +52,7 @@ export function Projects() {
   }, []);
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 relative w-100">
+    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 relative w-100 lg:w-full">
       <div className="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 -left-20 w-96 h-96 bg-indigo-500/30 rounded-full blur-[128px]"></div>
         <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-cyan-500/30 rounded-full blur-[128px]"></div>
