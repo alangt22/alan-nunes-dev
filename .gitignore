@@ -3,6 +3,7 @@ CLAUDE.md
 /docs
 
 # dependencies
+.cursor
 /node_modules
 /.pnp
 .pnp.*
